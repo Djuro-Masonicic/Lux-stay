@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Users, Bed, Maximize } from 'lucide-react'
+import { Users, Bed, Maximize, Sparkles } from 'lucide-react'
 
 interface Room {
   id: number
@@ -19,43 +19,56 @@ interface RoomCardProps {
 
 export default function RoomCard({ room }: RoomCardProps) {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
-      <div className="relative h-64 overflow-hidden">
+    <div className="group relative bg-dark-800 border border-gold-600/20 overflow-hidden transition-all duration-500 hover:border-gold-500/50 hover:shadow-2xl hover:shadow-gold-600/20">
+      <div className="relative h-80 overflow-hidden">
         <Image
           src={`https://images.unsplash.com/${room.image}`}
           alt={room.name}
           fill
-          className="object-cover group-hover:scale-110 transition-transform duration-300"
+          className="object-cover group-hover:scale-110 transition-transform duration-700"
         />
-        <div className="absolute top-4 right-4 bg-primary-600 text-white px-4 py-2 rounded-lg font-bold shadow-lg">
-          ${room.price}/night
+        <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-60"></div>
+        
+        {/* Price Tag */}
+        <div className="absolute top-6 right-6 bg-gradient-to-r from-gold-600 to-gold-500 text-dark-900 px-6 py-3 font-display font-bold text-2xl shadow-xl">
+          ${room.price}
+          <span className="text-sm font-normal block text-dark-800">per night</span>
+        </div>
+
+        {/* Premium Badge */}
+        <div className="absolute top-6 left-6 flex items-center space-x-2 bg-dark-900/80 backdrop-blur-sm border border-gold-600/30 px-3 py-1.5 rounded-full">
+          <Sparkles className="w-3 h-3 text-gold-400" />
+          <span className="text-gold-400 text-xs font-medium tracking-wider">PREMIUM</span>
         </div>
       </div>
       
-      <div className="p-6">
-        <h3 className="text-2xl font-bold mb-2 text-gray-900">{room.name}</h3>
-        <p className="text-gray-600 mb-4">{room.description}</p>
+      <div className="p-8">
+        <h3 className="text-3xl font-display font-bold mb-3 text-white group-hover:text-gold-400 transition-colors">
+          {room.name}
+        </h3>
+        <p className="text-gray-400 mb-6 leading-relaxed">{room.description}</p>
         
-        <div className="flex items-center gap-4 mb-6 text-sm text-gray-500">
-          <div className="flex items-center gap-1">
-            <Bed className="w-4 h-4" />
-            <span>{room.beds} Bed{room.beds > 1 ? 's' : ''}</span>
+        {/* Amenities */}
+        <div className="flex items-center gap-6 mb-8 pb-6 border-b border-gold-600/20">
+          <div className="flex items-center gap-2">
+            <Bed className="w-5 h-5 text-gold-400" />
+            <span className="text-gray-300 font-medium">{room.beds} Bed{room.beds > 1 ? 's' : ''}</span>
           </div>
-          <div className="flex items-center gap-1">
-            <Users className="w-4 h-4" />
-            <span>{room.guests} Guests</span>
+          <div className="flex items-center gap-2">
+            <Users className="w-5 h-5 text-gold-400" />
+            <span className="text-gray-300 font-medium">{room.guests} Guest{room.guests > 1 ? 's' : ''}</span>
           </div>
-          <div className="flex items-center gap-1">
-            <Maximize className="w-4 h-4" />
-            <span>{room.size} sq ft</span>
+          <div className="flex items-center gap-2">
+            <Maximize className="w-5 h-5 text-gold-400" />
+            <span className="text-gray-300 font-medium">{room.size} sq ft</span>
           </div>
         </div>
         
         <Link
           href="/booking"
-          className="block w-full text-center bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 rounded-lg transition shadow-md hover:shadow-lg"
+          className="block w-full text-center bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-dark-900 font-bold py-4 tracking-wider transition-all shadow-lg shadow-gold-600/20 hover:shadow-xl hover:shadow-gold-500/30 group-hover:scale-105 duration-300"
         >
-          Book Now
+          RESERVE NOW
         </Link>
       </div>
     </div>

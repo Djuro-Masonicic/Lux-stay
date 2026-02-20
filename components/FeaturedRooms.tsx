@@ -65,14 +65,20 @@ const rooms = [
 
 export default function FeaturedRooms() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-24 px-4 bg-gradient-to-b from-dark-900 to-dark-800">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-            Our Premium Rooms
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4">
+            <span className="text-gold-400 tracking-[0.3em] text-sm font-medium">ACCOMMODATIONS</span>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">
+            <span className="text-white">Signature</span>{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">
+              Suites
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose from our selection of carefully designed rooms, each offering unique experiences
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Immerse yourself in spaces designed for the discerning traveler
           </p>
         </div>
 

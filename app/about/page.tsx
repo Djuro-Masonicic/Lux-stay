@@ -3,117 +3,138 @@ import { Building2, Users, Award, Heart } from 'lucide-react'
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-dark-900">
       {/* Hero Section */}
-      <section className="relative h-[400px] bg-gradient-to-r from-primary-600 to-primary-800">
-        <div className="absolute inset-0 bg-black/30"></div>
+      <section className="relative h-[500px] bg-dark-900">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80"
+            alt="Luxury hotel lobby"
+            fill
+            className="object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-900/80 to-dark-900"></div>
+        </div>
         <div className="relative z-10 h-full flex items-center justify-center text-white">
           <div className="text-center max-w-4xl px-4">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">About LuxStay</h1>
-            <p className="text-xl md:text-2xl text-gray-100">
-              Creating unforgettable experiences since 2015
+            <div className="inline-block mb-4">
+              <span className="text-gold-400 tracking-[0.3em] text-sm font-medium">ABOUT US</span>
+            </div>
+            <h1 className="text-6xl md:text-7xl font-display font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">
+                Legacy of Luxury
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300">
+              Crafting extraordinary experiences since 2015
             </p>
           </div>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-20 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-gray-900">Our Story</h2>
-              <p className="text-lg text-gray-700 mb-4">
-                LuxStay was born from a simple vision: to redefine luxury accommodation by 
-                combining world-class amenities with personalized service. What started as a 
-                single boutique property has grown into a curated collection of premium rooms 
-                across prime locations.
+              <h2 className="text-5xl font-display font-bold mb-8 text-white">Our Legacy</h2>
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                Royale was conceived from an unwavering vision: to transcend the boundaries of 
+                luxury hospitality by harmonizing world-class amenities with bespoke service. 
+                What began as a distinguished boutique property has evolved into a prestigious 
+                collection of premium suites across the world's most coveted destinations.
               </p>
-              <p className="text-lg text-gray-700 mb-4">
-                We believe that where you stay should be more than just a place to sleep. 
-                It should be an experience that enriches your journey, whether you're traveling 
-                for business or pleasure.
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                We believe your accommodation should be more than mere lodging—it should be an 
+                immersive experience that elevates your journey, whether undertaken for commerce 
+                or leisure.
               </p>
-              <p className="text-lg text-gray-700">
-                Every detail in our rooms is carefully considered, from the finest linens to 
-                the latest technology, ensuring your stay is nothing short of exceptional.
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Every element within our suites is meticulously curated, from the finest Italian 
+                linens to cutting-edge smart technology, ensuring your stay transcends all expectations.
               </p>
             </div>
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[600px] border border-gold-600/30 overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80"
                 alt="Luxury hotel"
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 border-8 border-gold-600/20 pointer-events-none"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-dark-800 border-y border-gold-600/20">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             <div className="text-center">
-              <div className="text-5xl font-bold text-primary-600 mb-2">150+</div>
-              <div className="text-gray-600 text-lg">Premium Rooms</div>
+              <div className="text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-gold-400 to-gold-600 mb-3">150+</div>
+              <div className="text-gray-400 text-lg tracking-wide">Premium Suites</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-primary-600 mb-2">50K+</div>
-              <div className="text-gray-600 text-lg">Happy Guests</div>
+              <div className="text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-gold-400 to-gold-600 mb-3">50K+</div>
+              <div className="text-gray-400 text-lg tracking-wide">Distinguished Guests</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-primary-600 mb-2">25+</div>
-              <div className="text-gray-600 text-lg">Locations</div>
+              <div className="text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-gold-400 to-gold-600 mb-3">25+</div>
+              <div className="text-gray-400 text-lg tracking-wide">Global Locations</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-primary-600 mb-2">98%</div>
-              <div className="text-gray-600 text-lg">Satisfaction</div>
+              <div className="text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-gold-400 to-gold-600 mb-3">98%</div>
+              <div className="text-gray-400 text-lg tracking-wide">Satisfaction Rate</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">Our Values</h2>
+          <div className="text-center mb-20">
+            <div className="inline-block mb-4">
+              <span className="text-gold-400 tracking-[0.3em] text-sm font-medium">OUR PRINCIPLES</span>
+            </div>
+            <h2 className="text-5xl font-display font-bold text-white">Core Values</h2>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-100 rounded-full mb-6">
-                <Building2 className="w-10 h-10 text-primary-600" />
+            <div className="text-center group">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-dark-800 border border-gold-600/30 mb-8 group-hover:border-gold-500 transition-colors">
+                <Building2 className="w-12 h-12 text-gold-400" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Excellence</h3>
-              <p className="text-gray-600">
-                We maintain the highest standards in every aspect of our service and facilities.
+              <h3 className="text-2xl font-display font-bold mb-4 text-white">Excellence</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Unwavering commitment to the highest standards in every aspect of service.
               </p>
             </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-100 rounded-full mb-6">
-                <Users className="w-10 h-10 text-primary-600" />
+            <div className="text-center group">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-dark-800 border border-gold-600/30 mb-8 group-hover:border-gold-500 transition-colors">
+                <Users className="w-12 h-12 text-gold-400" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Community</h3>
-              <p className="text-gray-600">
-                We create spaces where guests feel welcome, connected, and at home.
+              <h3 className="text-2xl font-display font-bold mb-4 text-white">Community</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Cultivating spaces where guests experience connection and belonging.
               </p>
             </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-100 rounded-full mb-6">
-                <Award className="w-10 h-10 text-primary-600" />
+            <div className="text-center group">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-dark-800 border border-gold-600/30 mb-8 group-hover:border-gold-500 transition-colors">
+                <Award className="w-12 h-12 text-gold-400" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Innovation</h3>
-              <p className="text-gray-600">
-                We constantly evolve to meet and exceed modern travelers' expectations.
+              <h3 className="text-2xl font-display font-bold mb-4 text-white">Innovation</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Continuous evolution to surpass the expectations of modern travelers.
               </p>
             </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-100 rounded-full mb-6">
-                <Heart className="w-10 h-10 text-primary-600" />
+            <div className="text-center group">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-dark-800 border border-gold-600/30 mb-8 group-hover:border-gold-500 transition-colors">
+                <Heart className="w-12 h-12 text-gold-400" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Care</h3>
-              <p className="text-gray-600">
-                Every guest receives personalized attention and genuine hospitality.
+              <h3 className="text-2xl font-display font-bold mb-4 text-white">Dedication</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Personalized attention and authentic hospitality for every guest.
               </p>
             </div>
           </div>
@@ -121,30 +142,36 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-50 px-4">
+      <section className="py-24 bg-dark-800 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">Meet Our Team</h2>
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            Dedicated professionals committed to making your stay memorable
-          </p>
+          <div className="text-center mb-20">
+            <div className="inline-block mb-4">
+              <span className="text-gold-400 tracking-[0.3em] text-sm font-medium">LEADERSHIP</span>
+            </div>
+            <h2 className="text-5xl font-display font-bold mb-6 text-white">Our Distinguished Team</h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Visionary professionals dedicated to curating unforgettable experiences
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { name: 'Sarah Johnson', role: 'Founder & CEO', image: 'photo-1573496359142-b8d87734a5a2' },
               { name: 'Michael Chen', role: 'Head of Operations', image: 'photo-1556157382-97eda2d62296' },
               { name: 'Emma Williams', role: 'Guest Experience Director', image: 'photo-1580489944761-15a19d654956' }
             ].map((member, idx) => (
-              <div key={idx} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="relative h-80">
+              <div key={idx} className="group relative bg-dark-900 border border-gold-600/20 overflow-hidden hover:border-gold-500/50 transition-all">
+                <div className="relative h-96">
                   <Image
-                    src={`https://images.unsplash.com/${member.image}?w=400&q=80`}
+                    src={`https://images.unsplash.com/${member.image}?w=500&q=80`}
                     alt={member.name}
                     fill
-                    className="object-cover"
+                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-80"></div>
                 </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">{member.name}</h3>
-                  <p className="text-primary-600">{member.role}</p>
+                <div className="p-8 text-center">
+                  <h3 className="text-2xl font-display font-bold mb-2 text-white">{member.name}</h3>
+                  <p className="text-gold-400 tracking-wide">{member.role}</p>
                 </div>
               </div>
             ))}

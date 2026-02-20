@@ -1,14 +1,19 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const playfair = Playfair_Display({ 
+  subsets: ['latin'], 
+  variable: '--font-playfair',
+  weight: ['400', '700', '900']
+})
 
 export const metadata: Metadata = {
-  title: 'LuxStay - Premium Room Booking',
-  description: 'Book your perfect luxury accommodation with LuxStay. Experience comfort and elegance in our carefully curated rooms.',
+  title: 'Royale - Luxury Hotel & Suites',
+  description: 'Experience unparalleled luxury at Royale. Book your extraordinary stay in our premium suites and discover hospitality redefined.',
 }
 
 export default function RootLayout({
@@ -18,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
         <Navbar />
         <main className="min-h-screen">
           {children}

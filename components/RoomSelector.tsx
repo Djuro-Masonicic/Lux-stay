@@ -58,8 +58,8 @@ export default function RoomSelector() {
         <div
           key={room.id}
           onClick={() => setSelectedRoom(room.id)}
-          className={`relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all cursor-pointer ${
-            selectedRoom === room.id ? 'ring-4 ring-primary-500' : ''
+          className={`relative bg-dark-800 border overflow-hidden hover:shadow-lg hover:shadow-gold-600/20 transition-all cursor-pointer ${
+            selectedRoom === room.id ? 'border-gold-500 shadow-lg shadow-gold-600/20' : 'border-gold-600/20'
           }`}
         >
           <div className="flex">
@@ -74,17 +74,17 @@ export default function RoomSelector() {
             <div className="flex-1 p-4">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900">{room.name}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{room.description}</p>
+                  <h3 className="text-lg font-display font-bold text-white">{room.name}</h3>
+                  <p className="text-sm text-gray-400 mt-1">{room.description}</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-primary-600">${room.price}</div>
+                  <div className="text-2xl font-display font-bold text-gold-400">${room.price}</div>
                   <div className="text-xs text-gray-500">per night</div>
                 </div>
               </div>
             </div>
             {selectedRoom === room.id && (
-              <div className="absolute top-2 right-2 bg-primary-600 text-white rounded-full p-1">
+              <div className="absolute top-2 right-2 bg-gold-500 text-dark-900 p-1">
                 <Check className="w-5 h-5" />
               </div>
             )}
@@ -92,8 +92,8 @@ export default function RoomSelector() {
         </div>
       ))}
       {selectedRoom && (
-        <div className="bg-primary-50 border border-primary-200 rounded-lg p-4 text-center">
-          <p className="text-primary-800 font-semibold">
+        <div className="bg-gold-600/20 border border-gold-600/50 p-4 text-center">
+          <p className="text-gold-400 font-semibold tracking-wide">
             ✓ {rooms.find(r => r.id === selectedRoom)?.name} selected
           </p>
         </div>

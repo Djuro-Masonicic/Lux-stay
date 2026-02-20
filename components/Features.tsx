@@ -4,45 +4,51 @@ const features = [
   {
     icon: Wifi,
     title: 'High-Speed WiFi',
-    description: 'Stay connected with complimentary ultra-fast internet'
+    description: 'Stay connected with complimentary ultra-fast internet throughout your stay'
   },
   {
     icon: UtensilsCrossed,
-    title: 'Fine Dining',
-    description: 'Gourmet cuisine prepared by world-class chefs'
+    title: 'Gourmet Dining',
+    description: 'Michelin-starred cuisine prepared by world-renowned chefs'
   },
   {
     icon: Dumbbell,
-    title: 'Fitness Center',
-    description: 'State-of-the-art gym equipment 24/7'
+    title: 'Elite Fitness',
+    description: 'State-of-the-art gym with personal trainers available 24/7'
   },
   {
     icon: Car,
-    title: 'Valet Parking',
-    description: 'Convenient and secure vehicle parking'
+    title: 'Valet Service',
+    description: 'Premium parking with complimentary luxury vehicle service'
   },
   {
     icon: Coffee,
-    title: '24/7 Room Service',
-    description: 'Anything you need, whenever you need it'
+    title: 'Concierge 24/7',
+    description: 'Dedicated personal assistance for every need, any time'
   },
   {
     icon: Shield,
-    title: 'Premium Security',
-    description: 'Your safety is our top priority'
+    title: 'Maximum Security',
+    description: 'Advanced security systems ensuring your complete privacy and safety'
   }
 ]
 
 export default function Features() {
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-24 px-4 bg-dark-900">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-            World-Class Amenities
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4">
+            <span className="text-gold-400 tracking-[0.3em] text-sm font-medium">AMENITIES</span>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">
+            <span className="text-white">Unparalleled</span>{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">
+              Excellence
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Every detail designed for your comfort and convenience
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Every detail meticulously crafted to exceed your expectations
           </p>
         </div>
 
@@ -52,13 +58,21 @@ export default function Features() {
             return (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow group"
+                className="group relative bg-dark-800 border border-gold-600/20 p-8 hover:border-gold-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-gold-600/10"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-lg mb-6 group-hover:bg-primary-600 transition-colors">
-                  <Icon className="w-8 h-8 text-primary-600 group-hover:text-white transition-colors" />
+                {/* Decorative corner */}
+                <div className="absolute top-0 right-0 w-20 h-20 border-t border-r border-gold-600/30 group-hover:border-gold-500/50 transition-colors"></div>
+                <div className="absolute bottom-0 left-0 w-20 h-20 border-b border-l border-gold-600/30 group-hover:border-gold-500/50 transition-colors"></div>
+                
+                <div className="relative">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gold-600/20 to-gold-600/5 border border-gold-600/30 mb-6 group-hover:border-gold-500 transition-all">
+                    <Icon className="w-8 h-8 text-gold-400 group-hover:text-gold-300 transition-colors" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-2xl font-display font-bold mb-4 text-white group-hover:text-gold-400 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
               </div>
             )
           })}
